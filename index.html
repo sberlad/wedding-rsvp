@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Esther & Samuel — RSVP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;700&family=Libre+Baskerville:wght@400;700&family=Noto+Serif+Hebrew:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="language-switch"><button data-lang="en" class="active">EN</button><button
+                data-lang="he">עברית</button><button data-lang="de">DE</button></div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="jasmine"></div>
+            <p class="verse">אודך כי עניתני ותהי לי לישועה</p>
+            <h1><span data-i18n="esther">Esther Ayadi</span><em>&amp;</em><span data-i18n="samuel">Samuel Berlad</span>
+            </h1>
+            <p class="subtitle" data-i18n="married">are getting married</p>
+            <div class="date-block">
+                <p class="date" data-i18n="date">Friday, June 26, 2026</p>
+                <p class="hebrew-date" data-i18n="hdate">11 Tamuz 5786 · י״א תמוז תשפ״ו</p>
+                <p data-i18n="reception">Reception at 10:30</p>
+                <p data-i18n="chuppah">Chuppah at 11:00</p>
+            </div><a class="button" href="#rsvp" data-i18n="rsvp">RSVP</a>
+        </section>
+        <section class="section" id="details">
+            <div class="section-title">
+                <p data-i18n="celebration">The Celebration</p>
+                <h2 data-i18n="details">Wedding Details</h2>
+            </div>
+            <div class="grid">
+                <article>
+                    <h3 data-i18n="location">Location</h3>
+                    <p><strong data-i18n="venue">Kerem Tamar</strong></p>
+                    <p data-i18n="address">Gush Etzion Winery, Israel</p>
+                    <div class="map"><iframe title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Gush%20Etzion%20Winery%20Tzomet&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                    </div>
+                </article>
+                <article>
+                    <h3 data-i18n="dress">Dress Code</h3>
+                    <p data-i18n="dressText"><strong>Cocktail attire.</strong> Elegant, festive, and comfortable for a
+                        daytime wedding.</p>
+                </article>
+            </div>
+            <p class="note" data-i18n="travel">We know many are traveling—please RSVP as soon as possible.</p>
+        </section>
+        <section class="section" id="rsvp">
+            <div class="section-title">
+                <p data-i18n="reply">Kindly Reply</p>
+                <h2 data-i18n="rsvpTitle">RSVP</h2>
+            </div>
+            <form id="rsvpForm" class="form" novalidate><input type="hidden" id="language" name="language"
+                    value="en"><label><span data-i18n="name">Full Name</span>*<input name="fullName" required></label>
+                <p class="error" data-error-for="fullName"></p><label><span data-i18n="contact">Email /
+                        Phone</span>*<input name="contact" required></label>
+                <p class="error" data-error-for="contact"></p>
+                <fieldset>
+                    <legend data-i18n="attendance">Attendance</legend><label><input type="radio" name="attending"
+                            value="yes" required><span data-i18n="yes"> Attending</span></label><label><input
+                            type="radio" name="attending" value="no"><span data-i18n="no"> Not attending</span></label>
+                </fieldset>
+                <p class="error" data-error-for="attending"></p><label><span data-i18n="guests">Number of
+                        guests</span>*<input id="guestCount" type="number" name="guestCount" min="0" max="12" value="1"
+                        required></label>
+                <p class="hint" data-i18n="guestHint">Include yourself if attending. Use 0 if not attending.</p>
+                <p class="error" data-error-for="guestCount"></p><label><span data-i18n="guestNames">Names of additional
+                        guests</span><textarea name="guestNames" rows="3"></textarea></label><label><span
+                        data-i18n="meal">Meal preference</span><select name="mealPreference">
+                        <option value="" data-i18n="mealNone">No preference / not sure yet</option>
+                        <option value="regular" data-i18n="regular">Regular</option>
+                        <option value="vegetarian" data-i18n="vegetarian">Vegetarian</option>
+                        <option value="vegan" data-i18n="vegan">Vegan</option>
+                        <option value="gluten-free" data-i18n="gf">Gluten-free</option>
+                        <option value="other" data-i18n="other">Other — I’ll explain below</option>
+                    </select></label><label><span data-i18n="notes">Note</span><textarea name="notes"
+                        rows="4"></textarea></label>
+                        <input type="text" name="company" style="display:none">
+                        <button class="button" type="submit" data-i18n="send">Send
+                    RSVP</button>
+                <p id="formStatus" class="status"></p>
+            </form>
+        </section>
+    </main>
+    <footer data-i18n="footer">Esther & Samuel · June 26, 2026</footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

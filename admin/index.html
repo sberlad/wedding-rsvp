@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <title>RSVP Admin</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;700&family=Libre+Baskerville:wght@400;700&family=Noto+Serif+Hebrew:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <main class="admin-page">
+        <section class="section" id="adminLogin">
+            <div class="section-title">
+                <p>Private</p>
+                <h1>RSVP Admin</h1>
+            </div>
+            <form id="adminLoginForm" class="form"><label>Password<input id="adminPassword" type="password"
+                        required></label><button class="button">Enter</button>
+                <p id="adminLoginStatus" class="status"></p>
+            </form>
+        </section>
+        <section class="section hidden" id="adminPanel">
+            <div class="admin-header">
+                <h2>RSVPs</h2>
+                <div><button class="button" id="refreshAdmin" type="button">Refresh</button><button class="button"
+                        id="exportCsv" type="button">Export CSV</button></div>
+            </div>
+            <div class="summary">
+                <div class="summary-card"><strong id="totalResponses">0</strong>Responses</div>
+                <div class="summary-card"><strong id="totalAttending">0</strong>Attending</div>
+                <div class="summary-card"><strong id="totalDeclined">0</strong>Not attending</div>
+            </div>
+            <p id="adminStatus" class="status"></p>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Timestamp</th>
+                            <th>Name</th>
+                            <th>Contact</th>
+                            <th>Attending</th>
+                            <th>Guests</th>
+                            <th>Guest names</th>
+                            <th>Meal</th>
+                            <th>Notes</th>
+                            <th>Lang</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rsvpRows"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>
