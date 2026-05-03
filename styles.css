@@ -1,7 +1,7 @@
 :root {
-    --indigo: #1E3A5F;
-    --deep: #122847;
-    --paper: #F4E8C8;
+    --indigo: #17365F;
+    --deep: #102A4C;
+    --paper: ##D3AD8C;
     --cream: #fff8e7;
     --gold: #C8A24A;
     --gold2: #8B6D2B;
@@ -127,6 +127,19 @@ main {
     margin: 0 auto 1rem;
     background: radial-gradient(ellipse at 50% 25%, #fffdf1 0 18%, transparent 19%), radial-gradient(ellipse at 30% 50%, #fffdf1 0 16%, transparent 17%), radial-gradient(ellipse at 70% 50%, #fffdf1 0 16%, transparent 17%), linear-gradient(90deg, transparent, var(--gold2), transparent);
     background-repeat: no-repeat
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.logo {
+  display: block;
+  width: min(180px, 45vw);
+  height: auto;
+  margin: 0 auto 1.4rem;
+  object-fit: contain;
 }
 
 .verse {
