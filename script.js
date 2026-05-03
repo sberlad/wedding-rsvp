@@ -1,7 +1,6 @@
 // Supabase (keep your real values here locally)
 const SUPABASE_URL = "https://khwdgtrhqqjmmttngeld.supabase.co";
 const SUPABASE_ANON_KEY = "sb_publishable_hn92V8d9xNYdcVHgNqe3SQ_3Q3w0tpg";
-const ADMIN_PASSWORD = "Soda220512251";
 
 /* =========================
    Translations
