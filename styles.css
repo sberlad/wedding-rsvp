@@ -1,7 +1,7 @@
 :root {
     --indigo: #17365F;
     --deep: #102A4C;
-    --paper: ##D3AD8C;
+    --paper: #D3AD8C;
     --cream: #fff8e7;
     --gold: #C8A24A;
     --gold2: #8B6D2B;
@@ -30,17 +30,25 @@ body {
     color: var(--ink);
     font-family: var(--body);
     line-height: 1.7;
-    background: radial-gradient(circle at 20% 8%, rgba(200, 162, 74, .16), transparent 24rem), radial-gradient(circle at 80% 20%, rgba(30, 58, 95, .1), transparent 30rem), var(--paper)
+    background: url("./img/backgroundParchment.png");
 }
 
 body:before {
     content: "";
     position: fixed;
     inset: 0;
-    opacity: .25;
     pointer-events: none;
-    background-image: radial-gradient(circle, rgba(60, 42, 20, .10) 0 .7px, transparent .9px);
-    background-size: 7px 7px
+    opacity: .22;
+    background-image:
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,.18) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 70% 60%, rgba(80,45,25,.10) 0 1px, transparent 1.4px),
+        radial-gradient(circle, rgba(60,42,20,.08) 0 .7px, transparent .9px);
+    background-size:
+        23px 19px,
+        31px 27px,
+        7px 7px;
+    mix-blend-mode: multiply;
+
 }
 
 html[lang="he"] {
