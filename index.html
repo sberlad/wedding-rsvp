@@ -20,9 +20,12 @@
     </header>
     <main>
         <section class="hero">
-            <div class="logo"><img src="img/weddingLogo.png" alt=""></div>
+            <div class="logo">
+                <img src="img/weddingLogo.png" alt="">
+            </div>
             <p class="verse">אודך כי עניתני ותהי לי לישועה</p>
-            <h1><span data-i18n="esther">Esther Ayadi</span><em>&amp;</em><span data-i18n="samuel">Samuel Berlad</span>
+            <h1>
+                <span data-i18n="esther">Esther Ayadi</span><em>&amp;</em><span data-i18n="samuel">Samuel Berlad</span>
             </h1>
             <p class="subtitle" data-i18n="married">are getting married</p>
             <div class="date-block">
@@ -42,7 +45,8 @@
                     <h3 data-i18n="location">Location</h3>
                     <p><strong data-i18n="venue">Kerem Tamar</strong></p>
                     <p data-i18n="address">Gush Etzion Winery, Israel</p>
-                    <div class="map"><iframe title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    <div class="map">
+                        <iframe title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                             src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Gush%20Etzion%20Winery%20Tzomet&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
                     </div>
                 </article>
@@ -59,31 +63,45 @@
                 <p data-i18n="reply">Kindly Reply</p>
                 <h2 data-i18n="rsvpTitle">RSVP</h2>
             </div>
-            <form id="rsvpForm" class="form" novalidate><input type="hidden" id="language" name="language"
-                    value="en"><label><span data-i18n="name">Full Name</span>*<input name="fullName" required></label>
-                <p class="error" data-error-for="fullName"></p><label><span data-i18n="contact">Email /
-                        Phone</span>*<input name="contact" required></label>
+            <form id="rsvpForm" class="form" novalidate>
+                <input type="hidden" id="language" name="language" value="en">
+                <label><span data-i18n="name">Full Name</span>*<input name="fullName" required></label>
+                <p class="error" data-error-for="fullName"></p>
+                <label><span data-i18n="contact">Email / Phone</span>*<input name="contact" required></label>
                 <p class="error" data-error-for="contact"></p>
                 <fieldset>
-                    <legend data-i18n="attendance">Attendance</legend><label><input type="radio" name="attending"
-                            value="yes" required><span data-i18n="yes"> Attending</span></label><label><input
-                            type="radio" name="attending" value="no"><span data-i18n="no"> Not attending</span></label>
+                    <legend data-i18n="attendance">Attendance</legend>
+                    <label><input type="radio" name="attending" value="yes" required>
+                        <span data-i18n="yes"> Attending</span>
+                    </label>
+                    <label><input type="radio" name="attending" value="no"><span data-i18n="no"> Not attending</span>
+                    </label>
                 </fieldset>
-                <p class="error" data-error-for="attending"></p><label><span data-i18n="guests">Number of
-                        guests</span>*<input id="guestCount" type="number" name="guestCount" min="0" max="12" value="1"
-                        required></label>
+                <p class="error" data-error-for="attending"></p>
+                <label>
+                    <span data-i18n="guests">Number of guests</span>*<input id="guestCount" type="number" name="guestCount" min="0" max="12" value="1" required>
+                </label>
                 <p class="hint" data-i18n="guestHint">Include yourself if attending. Use 0 if not attending.</p>
-                <p class="error" data-error-for="guestCount"></p><label><span data-i18n="guestNames">Names of additional
-                        guests</span><textarea name="guestNames" rows="3"></textarea></label><label><span
-                        data-i18n="meal">Meal preference</span><select name="mealPreference">
+                <p class="error" data-error-for="guestCount"></p>
+                <label>
+                    <span data-i18n="guestNames">Names of additional guests</span>
+                    <textarea name="guestNames" rows="3"></textarea>
+                </label>
+                <!--<label>
+                    <span data-i18n="meal">Meal preference</span>
+                    <select name="mealPreference">
                         <option value="" data-i18n="mealNone">No preference / not sure yet</option>
                         <option value="regular" data-i18n="regular">Regular</option>
                         <option value="vegetarian" data-i18n="vegetarian">Vegetarian</option>
                         <option value="vegan" data-i18n="vegan">Vegan</option>
                         <option value="gluten-free" data-i18n="gf">Gluten-free</option>
                         <option value="other" data-i18n="other">Other — I’ll explain below</option>
-                    </select></label><label><span data-i18n="notes">Note</span><textarea name="notes"
-                        rows="4"></textarea></label>
+                    </select>
+                </label>-->
+                <label>
+                    <span data-i18n="notes">Note</span>
+                    <textarea name="notes" rows="4"></textarea>
+                </label>
                         <input type="text" name="company" style="display:none">
                         <button class="button" type="submit" data-i18n="send">Send
                     RSVP</button>

@@ -42,13 +42,13 @@ const tr = {
     guestHint: "Include yourself if attending. Use 0 if not attending.",
     guestNames: "Names of additional guests",
 
-    meal: "Meal preference",
+    /*meal: "Meal preference",
     mealNone: "No preference / not sure yet",
     regular: "Regular",
     vegetarian: "Vegetarian",
     vegan: "Vegan",
     gf: "Gluten-free",
-    other: "Other — I’ll explain below",
+    other: "Other — I’ll explain below",*/
 
     notes: "Note",
     send: "Send RSVP",
