@@ -30,7 +30,7 @@ body {
     color: var(--ink);
     font-family: var(--body);
     line-height: 1.7;
-    background: url("./img/backgroundParchment.png");
+    background: white;
 }
 
 body:before {
